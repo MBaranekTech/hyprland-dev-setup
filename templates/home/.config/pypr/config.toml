@@ -1,0 +1,13 @@
+[pyprland]
+plugins = ["scratchpads"]
+
+[scratchpads.terminal]
+command = "exec foot --config=@HOME@/.config/hypr/foot.ini --app-id=hypr-dropterm"
+class = "hypr-dropterm"
+animation = "fromTop"
+size = "80% 55%"
+max_size = "1600px 900px"
+margin = 40
+lazy = true
+pinned = true
+unfocus = "hide"

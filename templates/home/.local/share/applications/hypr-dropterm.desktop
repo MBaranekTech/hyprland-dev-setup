@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Drop-down Terminal
+Exec=foot --config=@HOME@/.config/hypr/foot.ini --app-id=hypr-dropterm
+Icon=foot
+Terminal=false
+NoDisplay=true
+Categories=System;TerminalEmulator;

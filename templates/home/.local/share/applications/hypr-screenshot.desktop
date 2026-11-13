@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Screenshot
+Name[cs]=Screenshot – snímek obrazovky
+Comment=Select a screen region, save it and copy it to the clipboard
+Comment[cs]=Vyber oblast obrazovky, ulož snímek a zkopíruj ho do schránky
+Exec=sh @HOME@/.config/hypr/scripts/screenshot.sh
+Icon=camera-photo
+Terminal=false
+Categories=Utility;
+Keywords=screenshot;screen;capture;snimek;obrazovka;vyrez;
+StartupNotify=false

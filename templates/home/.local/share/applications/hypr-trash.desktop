@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Trash
+Name[cs]=Koš
+Comment=Open the trash in Files
+Comment[cs]=Otevřít koš ve správci souborů
+Exec=nautilus trash:///
+Icon=user-trash
+Terminal=false
+Categories=Utility;
+Keywords=trash;bin;kos;koš;
+StartupNotify=false

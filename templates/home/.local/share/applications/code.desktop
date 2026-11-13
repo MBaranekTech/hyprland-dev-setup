@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Visual Studio Code
+Exec=/snap/bin/code --force-user-env %F
+Icon=/snap/code/current/meta/gui/vscode.png
+StartupWMClass=code
+Terminal=false
+NoDisplay=true
+Categories=Development;IDE;

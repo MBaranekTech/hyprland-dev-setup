@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Satty
+GenericName=Screenshot Editor
+Exec=@HOME@/.local/bin/satty -f %f
+TryExec=@HOME@/.local/bin/satty
+Icon=satty
+Terminal=false
+NoDisplay=true
+MimeType=image/png;image/jpeg;
+Categories=Graphics;

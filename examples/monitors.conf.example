@@ -1,0 +1,10 @@
+# Example only: replace DP-1 and eDP-1 with names from `hyprctl monitors`.
+# No monitor descriptions, models, or serial numbers are shared here.
+
+# 4K external display at 150% on the left (logical size: 2560x1440).
+monitor = DP-1, 3840x2160@60, 0x0, 1.5
+# Laptop display on the right, vertically centered.
+monitor = eDP-1, 1920x1200@60, 2560x120, 1
+
+# For a 2560x1440 external display at 100%, use this instead of the DP-1 rule:
+# monitor = DP-1, 2560x1440@60, 0x0, 1
