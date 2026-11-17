@@ -65,6 +65,8 @@ The top bar provides:
 
 Bluetooth opens Blueman with a left-click and toggles power with a right-click. The notification bell opens the notification center; right-clicking it toggles Do Not Disturb.
 
+Waybar runs through the `hypr-waybar.service` user service. If the process crashes, systemd restarts it after two seconds. The session starts this service after importing the Wayland environment. Logs are available with `journalctl --user -u hypr-waybar.service`.
+
 ### Left dock
 
 The dock uses **32 px icons**, compact spacing, rounded corners, and a **50% opaque background with blur**.
@@ -155,6 +157,7 @@ The dock follows whichever active display is furthest left. With only the laptop
 | `~/.config/hypr/local.conf` | Personal overrides, rules, autostart entries, and additional bindings |
 | `~/.config/hypr/monitors.conf` | Home and work monitor profiles |
 | `~/.config/hypr/waybar.json` and `waybar.css` | Top bar modules and appearance |
+| `~/.config/systemd/user/hypr-waybar.service` | Waybar startup and automatic recovery after a crash |
 | `~/.config/hypr/foot.ini` | Terminal appearance |
 | `~/.config/hypr/hyprsunset.conf` | Night light schedule and saved temperature |
 | `~/.config/hypr/hypridle.conf` | Inactivity timers |
@@ -180,6 +183,8 @@ This creates an ignored `.rendered/` directory. It does not change the running d
 The templates target the documented Hyprland version. Install the desktop tools through your distribution or their official upstream projects. The original local setup used Pyprland 3.4.6, Satty 0.22.0, SwayNotificationCenter 0.12.4, Hyprsunset 0.4.0, nwg-dock-hyprland 0.4.11, and Waycal 0.2.1. Their binaries and dependencies are not bundled here.
 
 The session starts SwayNotificationCenter through its user service. Stop any other notification daemon before enabling it. The included service condition restricts that service to a Hyprland session.
+
+After installing or changing user service files, run `systemctl --user daemon-reload`. The session startup script starts `hypr-waybar.service`; start it manually with `systemctl --user start hypr-waybar.service` when applying this change to an existing session.
 
 The [VS Code runtime-argument example](examples/vscode-argv.json) contains only the keyring setting. Merge it into your own runtime arguments if needed; it contains no installation-specific telemetry identifier.
 
